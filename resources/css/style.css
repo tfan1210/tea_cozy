@@ -81,3 +81,38 @@ h2, h3, h4 {
   margin: 0;
   padding: 10px;
 }
+
+#store {
+  height: 700px;
+  width: 1000px;
+  margin: auto;
+  padding-top: 70px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.items {
+  padding: 5px;
+}
+
+.item img {
+  height: 200px;
+  width: 300px;
+  margin: 10px;
+  display: block;
+}
+
+.item span {
+  display: block;
+  padding: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.item {
+  padding: 5px;
+}
