@@ -42,3 +42,42 @@ nav span {
 a {
   color: seashell;
 }
+
+.main {
+  padding-top: 69px;
+  opacity: 0.9;
+  width: 1200px;
+  margin: auto;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#mission {
+  height: 700px;
+  background-image: url('../../resources/images/mission-background.jpg');
+  padding-top: 70px;
+}
+
+div {
+  display: block;
+}
+
+#mission .content {
+  margin: auto;
+  background-color: black;
+  width: 100%;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+h2, h3, h4 {
+  margin: 0;
+  padding: 10px;
+}
