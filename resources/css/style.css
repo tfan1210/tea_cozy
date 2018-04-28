@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: Helvetica;
-  color: seashell;
-  background-color: black;
+  color: black;
+  background-color: seashell;
   opacity: 0.9;
   text-align: center;
   font-size: 22px;
@@ -36,7 +36,7 @@ nav {
 
 nav span {
   display: inline-block;
-  padding: 20px 10px;
+
 }
 
 a {
@@ -50,6 +50,61 @@ a {
   margin: auto;
 }
 
+.mobile {
+  display: none;
+}
+
+.desktop span {
+  padding: 20px 10px;
+}
+
+#nav-toggle {
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  transition: all 500ms ease-in-out;
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #343434;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+.mobile-list {
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-list li {
+  display: block;
+  text-align: center;
+}
+
+
 .flex-container {
   display: flex;
   justify-content: center;
@@ -60,6 +115,7 @@ a {
   height: 700px;
   background-image: url('../../resources/images/mission-background.jpg');
   padding-top: 70px;
+  color: seashell;
 }
 
 div {
@@ -117,6 +173,10 @@ h2, h3, h4 {
   padding: 5px;
 }
 
+.item:hover {
+  cursor: pointer;
+}
+
 #locations {
   background-image: url('../../resources/images/locations-background.jpg');
   height: 500px;
@@ -141,6 +201,7 @@ h2, h3, h4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: seashell;
 }
 
 #contact {
@@ -151,5 +212,87 @@ h2, h3, h4 {
 footer {
   text-align: left;
   padding-left: 20px;
-  
+
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: seashell;
+  z-index: 2;
+  display: none;
+  cursor: pointer;
+}
+
+.carousel {
+  width: 80%;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.carousel img {
+  width: 600px;
+  height: auto;
+  text-align: center;
+  margin: auto;
+}
+
+  .carousel.open.slick-initialized.slick-slider {
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+  background-color: black;
+  transition: all linear 600;
+}
+
+ .overly-background {
+  background-color: white;
+  transition: all linear 600;
+}
+
+.btn {
+  color: gray;
+  float: right;
+  position: absolute;
+  top: 30px;
+  right: 200px;
+  font-size: 35px;
+  text-decoration: none;
+}
+
+
+@media only screen and (max-width: 1300px) {
+  .desktop {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: seashell;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .mobile a {
+    display: inline-block;
+    margin: 12px;
+    color: black;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  #mission {
+    width: 100%;
+  }
 }

@@ -4,14 +4,28 @@
     <meta charset="utf-8">
     <title>Tea Cozy</title>
     <link href="./resources/css/style.css" style="text/css" rel="stylesheet">
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
   </head>
   <body>
     <header class="flex-container">
       <img src="./resources/images/logo.png" alt="logo" \>
-      <nav>
+      <nav class="desktop">
         <span><a href="#mission">Mission</a></span>
         <span><a href="#store">Featured Tea</a></span>
         <span><a href="#locations">Locations</a></span>
+      </nav>
+      <!-- Mobile Nav -->
+      <nav class="mobile">
+        <a id="nav-toggle" href="#">
+          <span></span>
+        </a>
+        <ul class="mobile-list" style="display: none;">
+          <li><a href="#mission">Mission</a></li>
+          <li><a href="#store">Featured Tea</a></li>
+          <li><a href="#locations">Locations</a></li>
+        </ul>
       </nav>
     </header>
     <!-- End of Header section -->
@@ -92,5 +106,35 @@
       <!-- end of footer-->
     </div>
     <!-- end of main section -->
-  </body>
+    <div class="overlay">
+    <a href="#" class="btn">&#10006;</a>
+    <div class="carousel">
+      <div class="tea-item">
+        <img src="resources/images/berryblitz.jpg" alt="A cup of berry tea," />
+        <h4>Fall Berry Blitz Tea</h4>
+      </div>
+      <div class="tea-item">
+        <img src="resources/images/spiced-rum.jpg" alt="A crate of Rum tea." />
+        <h4>Spiced Rum Tea</h4>
+      </div>
+      <div class="tea-item">
+        <img src="resources/images/donut.jpg" alt="A donut." />
+        <h4>Seasonal Donuts</h4>
+      </div>
+      <div class="tea-item">
+        <img src="resources/images/myrtle-ave.jpg" alt="A cup of myrtle tea." />
+        <h4>Myrtle Ave Tea</h4>
+      </div>
+      <div class="tea-item">
+        <img src="resources/images/bedford-bizarre.jpg" alt="A cup bedford tea." />
+        <h4>Bedford Bizarre Tea</h4>
+      </div>
+    </div>
+  </div>
+    <!-- javascript Load -->
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="./resources/js/main.js"></script>
+    <!-- javascript slick carousel -->
+    <script type="text/javascript" src="./slick/slick.js"></script>
 </html>
