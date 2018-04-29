@@ -9,6 +9,7 @@ $(document).ready(function(){
   });
 
   //Use slick to set up carousel
+  debugger;
   var $galleryImg = $(".items img");
   var $closeBtn = $(".btn");
   var $carousel = $(".carousel");
